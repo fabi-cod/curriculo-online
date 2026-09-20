@@ -365,3 +365,20 @@ body{
     font-size: 14px;
     border-top: 1px solid rgba(139, 92, 246, 0.2);
 }
+
+/* BOTÃO PARA VOLTAR AO TOPO */
+
+.voltar-topo{
+
+    color: var(--azul-claro);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+
+}
+
+.voltar-topo:hover{
+
+    color: var(--roxo-claro);
+
+}
