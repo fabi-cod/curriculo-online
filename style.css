@@ -1,0 +1,367 @@
+/* ESTILO GERAL DA PÁGINA */
+
+/*COMENTÁRIO EXTRA, ESTOU ANSIOSA!!!!*/
+
+/* CORES PRINCIPAIS DO MEU SITE */
+:root {
+    --fundo: #080b16;
+    --fundo-secundario: #11152b;
+
+    --roxo: #8b5cf6;
+    --roxo-claro: #a78bfa;
+
+    --azul: #3b82f6;
+    --azul-claro: #60a5fa;
+
+    --texto: #f8fafc;
+    --texto-secundario: #b6bdd0;
+}
+
+/* FAZ A NAV. ENTRE AS SEÇÕES ACONTECER SUAVEMENTE*/
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(
+        135deg,
+        var(--fundo),
+        var(--fundo-secundario),
+        #160d2d
+    );
+    color: var(--texto);
+    font-family: arial, sans-serif;
+
+}
+
+/* PRIMEIRA PARTE DO SITE */
+.inicio{
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    
+    animation: aparecer 1s ease;
+}
+
+.saudacao{
+    color: var(--azul-claro);
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.nome{
+    font-size: 65px;
+    color: var(--roxo-claro);
+    margin: 10px 0;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    
+}
+
+.profissao{
+    font-size: 24px;
+    max-width: 700px;
+    margin-bottom: 15px;
+}
+
+.descricao{
+    max-width: 600px;
+    font-size: 17px;
+    line-height:1.6;
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
+
+}
+
+.boton{
+    color: white;
+    background-color: var(--roxo);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.botao:hover{
+    background-color: var(--azul);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.sobre {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.sobre h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--roxo-claro);
+}
+
+.sobre p{
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--texto-secundario);
+}
+
+/* ESTILO GERAL DAS SEÇÕES */
+.secao{
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 30px;
+    box-sizing: border-box
+
+}
+
+/* TÍTULOS PRINCIPAIS DAS SEÇÕES */
+.titulo-secao{
+
+    font-size: 38px;
+    color: var(--roxo-claro);
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+
+}
+
+/* CARDS */
+.cards{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+
+}
+
+/* ESTILO DE CADA CARD!!! */
+.card{
+
+    width: 260px;
+    padding: 25px;
+    background-color: rgba(17, 21, 43, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 12px;
+    transition: 0.3s;
+
+}
+/* EFEITO AO PASSAR O MOUSE NO CARD!! */
+.card:hover{
+
+    transform: translateY(-8px);
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.25);
+
+}
+
+/* TÍTULO DE CADA CADR */
+.card h3{
+
+    color: var(--azul-claro);
+    margin-top: 0;
+
+}
+
+/* TEXTO DOS CARDS*/
+.card p{
+
+    color: var(--texto-secundario);
+    line-height: 1.6;
+
+}
+
+/* NOME DA INST. */
+.instituicao{
+
+    color: var(--roxo-claro) !important;
+    font-weight: bold;
+
+}
+
+/* STATUS DOS CURSOS */
+.status{
+
+    color: var(--azul-claro) !important;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+/* HABILIDADES */
+.habilidades{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 700px;
+
+}
+
+.habilidades span{
+
+    padding: 12px 20px;
+    background-color: rgba(139, 92, 246, 0.15);
+    border: 1px solid var(--roxo);
+    border-radius: 20px;
+    color: var(--texto);
+    transition: 0.3s;
+
+}
+
+/* EFEITO HABILIDADES */
+.habilidades span:hover{
+
+    background-color: var(--roxo);
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+
+}
+
+/* SUBT. DA SEÇÃO DE HAB. */
+.subtitulo{
+
+    color: var(--azul-claro);
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+}
+
+/* CONTATO */
+.contato{
+
+    text-align: center;
+
+}
+
+/* TEXTO ACIMA DOS CONTATOS */
+.texto-contato{
+    
+    max-width: 600px;
+    color: var(--texto-secundario);
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+
+}
+
+/* ONDE FICAM OS CONTATOS */
+.contatos{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+/* CADA CARD DE CONT. */
+.contato-card{
+    
+    width: 220px;
+    padding: 20px;
+    background-color: rgba(17, 21, 43, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 12px;
+    color: var(--texto);
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.contato-card h3{
+    
+    color: var(--roxo-claro);
+    margin: 0;
+
+}
+
+.contato-card:hover{
+
+    transform: translateY(-6px);
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* MENU DE NAVEGAÇÃO */
+.menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px 0;
+
+}
+/* LINKS MENU */
+.menu a {
+    color: var(--texto);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* EFEITO QUANDO PASSA O MOUSE NOS LINKS */
+.menu a:hover {
+    color:var(--roxo-claro)
+}
+
+/* AJUSTES PARA TELAS MENORES */
+
+@media (max-width: 78px){
+
+    .none{
+        font-size: 45px;
+    }
+
+    .profissao{
+        font-size: 20px;
+    }
+    
+    .titulo-secao{
+        font-size: 30px;
+    }
+
+    .secao{
+        padding: 40px 20px;
+    }
+
+}
+
+.rodape{
+    
+    padding: 25px;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
