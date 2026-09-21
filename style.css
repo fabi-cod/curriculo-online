@@ -4,8 +4,8 @@
 
 /* CORES PRINCIPAIS DO MEU SITE */
 :root {
-    --fundo: #080b16;
-    --fundo-secundario: #11152b;
+    --fundo: #05070d;
+    --fundo-secundario: #10131f;
 
     --roxo: #8b5cf6;
     --roxo-claro: #a78bfa;
@@ -22,31 +22,57 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ESTILO GERAL DA PAG */
 body{
+    
     margin: 0;
-    background: linear-gradient(
-        135deg,
-        var(--fundo),
-        var(--fundo-secundario),
-        #160d2d
-    );
     color: var(--texto);
     font-family: arial, sans-serif;
+    background-color: var(--fundo);
+    background-image: radial-gradient(circle at 15% 25%,
+                    rgba(139, 92, 246, 0.12),
+                      transparent 28%),
+                      
+                      radial-gradient(circle at 85% 75%,
+                      rgba(59, 130, 246, 0.10),
+                      transparent 30%),
+
+                      linear-gradient(rgba(0, 0, 0, 0.35),
+                                      rgba(0, 0, 0, 0.55)),
+                                      url("imagens/fundo1.png");
+    
+    background-size: 120% 120%, 120% 120%, cover, 110% 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed, fixed, fixed, fixed;
+    background-position: 10% 20%, 90% 80%, center, 50% 45%;
+    animation: movimento-fundo 30s ease-in-out infinite alternate;
 
 }
 
+@keyframes movimento-fundo{
+
+    from{ 
+        background-position: 10% 20%, 90% 80%, center, 50% 45%;
+    }
+    
+    to{
+        background-position: 30% 35%, 70% 60%, center, 50% 55%;
+    }
+
+}
+
+
 /* PRIMEIRA PARTE DO SITE */
 .inicio{
-    min-height: 100vh;
     
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-    
     animation: aparecer 1s ease;
+
 }
 
 .saudacao{
@@ -57,11 +83,25 @@ body{
 }
 
 .nome{
+    
     font-size: 65px;
     color: var(--roxo-claro);
     margin: 10px 0;
-    text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    text-shadow: 
+        0 0 10px rgba(139, 92, 246, 0.5),
+        0 0 20px rgba(59, 130, 246, 0.2);
+    letter-spacing: 2px;
     
+}
+
+.linha-futurista{
+
+    width: 130px;
+    height: 2px;
+    margin: 5px 0 25px;
+    background: linear-gradient(90deg, transparent, var(--roxo), var(--azul-claro), transparent);
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+
 }
 
 .profissao{
@@ -79,7 +119,7 @@ body{
 
 }
 
-.boton{
+.botao{
     color: white;
     background-color: var(--roxo);
     text-decoration: none;
@@ -95,6 +135,7 @@ body{
 }
 
 .sobre {
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -102,18 +143,38 @@ body{
     align-items: center;
     padding: 40px;
     text-align: center;
+    box-sizing: border-box;
+
 }
 
 .sobre h2{
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    color: var(--texto);
+}
+
+.sobre h2 span{
+
     color: var(--roxo-claro);
+    text-shadow: 0 0 6px rgba(167, 139, 250, 0.6),
+                 0 0 12px rgba(139, 92, 246, 0.4);
+
+}
+
+.linha-titulo{
+
+    width: 70px;
+    height: 2px;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, var(--roxo), var(--azul-claro));
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
+
 }
 
 .sobre p{
-    max-width: 700px;
+    max-width: 750px;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--texto-secundario);
 }
 
@@ -126,17 +187,70 @@ body{
     justify-content: center;
     align-items: center;
     padding: 60px 30px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+/* EASTER EGG */
+.segredo{
+
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    color: var(--roxo-claro);
+    font-size: 17px;
+    text-decoration: none;
+    opacity: 0.15;
+    transition: 0.4s;
+
+}
+
+.segredo:hover{
+
+    opacity: 1;
+    color: var(--azul-claro);
+    transform: scale(1.6) rotate(20deg);
+    text-shadow: 
+        0 0 8px var(--roxo),
+        0 0 15px var(--azul);
+
+}
+
+/* SEGUNDO EASTER EGG */
+.segredo-dois{
+
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    color: var(--azul-claro);
+    font-size: 15px;
+    text-decoration: none;
+    opacity: 0.10;
+    transition: 0.4s;
+
+}
+
+.segredo-dois:hover{
+
+    opacity: 1;
+    color: var(--roxo-claro);
+    transform: scale(1.8) rotate(-20deg);
+    text-shadow: 
+        0 0 8px var(--azul),
+        0 0 18px var(--roxo);
 
 }
 
 /* TÍTULOS PRINCIPAIS DAS SEÇÕES */
 .titulo-secao{
 
-    font-size: 38px;
-    color: var(--roxo-claro);
-    margin-bottom: 40px;
-    text-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+    font-size: 36px;
+    color: var(--texto);
+    margin-bottom: 8px;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(167, 139, 250, 0.35),
+                 0 0 12px rgba(139, 92, 246, 0.20);
 
 }
 
@@ -156,7 +270,7 @@ body{
 
     width: 260px;
     padding: 25px;
-    background-color: rgba(17, 21, 43, 0.8);
+    background-color: rgba(8, 10, 18, 0.82);
     border: 1px solid rgba(139, 92, 246, 0.4);
     border-radius: 12px;
     transition: 0.3s;
@@ -240,7 +354,7 @@ body{
 
     color: var(--azul-claro);
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 15px;
 
 }
@@ -259,7 +373,7 @@ body{
     color: var(--texto-secundario);
     font-size: 17px;
     line-height: 1.6;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
 }
 
@@ -278,7 +392,7 @@ body{
     
     width: 220px;
     padding: 20px;
-    background-color: rgba(17, 21, 43, 0.8);
+    background-color: rgba(8, 10, 18, 0.82);
     border: 1px solid rgba(139, 92, 246, 0.4);
     border-radius: 12px;
     color: var(--texto);
@@ -324,31 +438,24 @@ body{
 
 }
 /* LINKS MENU */
-.menu a {
+.menu a{
     color: var(--texto);
     text-decoration: none;
     transition: 0.3s;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 /* EFEITO QUANDO PASSA O MOUSE NOS LINKS */
-.menu a:hover {
+.menu a:hover{
     color:var(--roxo-claro)
 }
 
-/* AJUSTES PARA TELAS MENORES */
+/* AJUSTES SIMPLES PARA TELAS MENORES */
 
-@media (max-width: 78px){
+@media (max-width: 768px){
 
-    .none{
+    .nome{
         font-size: 45px;
-    }
-
-    .profissao{
-        font-size: 20px;
-    }
-    
-    .titulo-secao{
-        font-size: 30px;
     }
 
     .secao{
@@ -364,6 +471,8 @@ body{
     color: var(--texto-secundario);
     font-size: 14px;
     border-top: 1px solid rgba(139, 92, 246, 0.2);
+    background-color: rgba(5, 7, 13, 0.75);
+
 }
 
 /* BOTÃO PARA VOLTAR AO TOPO */
@@ -382,3 +491,4 @@ body{
     color: var(--roxo-claro);
 
 }
+
