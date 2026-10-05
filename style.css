@@ -393,7 +393,7 @@ body::after{
     font-size: 15px;
     text-decoration: none;
     opacity: 0.12;
-    transition: 0.4;
+    transition: 0.4s;
     z-index: 5;
 }
 
