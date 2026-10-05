@@ -382,13 +382,18 @@ body::after{
 /* EASTER EGG */
 .segredo{
     position: absolute;
-    right: 35px;
-    top: 50%;
+    left: 76px;
+    bottom: -7px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--roxo-claro);
-    font-size: 17px;
+    font-size: 15px;
     text-decoration: none;
-    opacity: 0.15;
-    transition: 0.4s;
+    opacity: 0.12;
+    transition: 0.4;
     z-index: 5;
 }
 
@@ -402,6 +407,7 @@ body::after{
 
 .projetos-titulo{
     margin-bottom: 30px;
+    position: relative;
 }
 
 .projetos .titulo-secao{
@@ -922,17 +928,6 @@ body::after{
     .habilidade-itens{
         justify-content: flex-start;
 }
-
-    .segredo{
-        top: 115px;
-        right: 18px;
-        width: 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-    }
 
     .contato{
         min-height: auto;
