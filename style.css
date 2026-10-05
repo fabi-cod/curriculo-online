@@ -884,6 +884,7 @@ body::after{
         display: none;
     }
 
+    /* LINHA VERTICAL */
     .formacao-item:first-child::after{
         content: "";
         position: absolute;
@@ -895,11 +896,12 @@ body::after{
     }
 
     .formacao-item::before{
-        left: 25px;
+        left: -25px;
         width: 20px;
         height: 2px;
+        background-color: var(--roxo-claro);
     }
-    
+
     .projetos{
         min-height: auto;
         padding: 70px 20px;
