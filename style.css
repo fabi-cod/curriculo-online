@@ -125,14 +125,6 @@ body::after{
     box-shadow: 0 0 5px rgba(139, 92, 246, 0.22);
 }
 
-.linha-titulo{
-    width: 70px;
-    height: 2px;
-    margin-top: 6px;
-    margin-bottom: 25px;
-    background: linear-gradient(90deg, var(--roxo), var(--azul-claro));
-    opacity: 0.65;
-}
 
 .profissao{
     font-size: 24px;
@@ -277,10 +269,6 @@ body::after{
         0 0 6px rgba(167, 139, 250, 0.28);
 }
 
-.sobre .linha-titulo{
-    margin-bottom: 0;
-}
-
 /* ESTILO GERAL DAS SEÇÕES */
 .secao{
     min-height: 100vh;
@@ -321,10 +309,6 @@ body::after{
 .formacao .titulo-secao{
     text-align: left;
     margin-top: 0;
-}
-
-.formacao .linha-titulo{
-    margin-bottom: 0;
 }
 
 /* LISTA */
@@ -412,10 +396,6 @@ body::after{
 
 .projetos .titulo-secao{
     text-align: left;
-}
-
-.projetos .linha-titulo{
-    margin-bottom: 0;
 }
 
 /* GUARDA OS DOIS PROJETOS */
@@ -569,10 +549,6 @@ body::after{
     text-align: left;
 }
 
-.habilidades-secao .linha-titulo{
-    margin-bottom: 0;
-}
-
 /* ÁREA COM AS DUAS CATEGORIAS */
 .habilidades-conteudo{
     width: 100%;
@@ -647,10 +623,6 @@ body::after{
 
 .contato .titulo-secao{
     text-align: left;
-}
-
-.contato .linha-titulo{
-    margin-bottom: 0;
 }
 
 /* CONTEÚDO */
@@ -784,6 +756,46 @@ body::after{
     width: 100%;
 }
 
+/* ESTILO DOS TÍTULOS DAS SEÇÕES */
+.sobre h2.titulo-caixa{
+    white-space: nowrap;
+}
+
+.sobre h2.titulo-caixa,.titulo-secao.titulo-caixa{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 10px 18px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* CANTO SUPERIOR ESQUERDO */
+.sobre h2.titulo-caixa::before, .titulo-secao.titulo-caixa::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 15px;
+    border-top: 2px solid var(--roxo);
+    border-left: 2px solid var(--roxo);
+}
+
+/* CANTO INFERIOR DIREITO */
+.sobre h2.titulo-caixa::after, .titulo-secao.titulo-caixa::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 22px;
+    height: 15px;
+    border-right: 2px solid var(--azul-claro);
+    border-bottom: 2px solid var(--azul-claro);
+}
+
+
 /* AJUSTES SIMPLES PARA TELAS DE CELULAR */
 @media (max-width: 768px){
     .nome{
@@ -885,18 +897,18 @@ body::after{
     .projetos{
         min-height: auto;
         padding: 70px 20px;
-}
+    }
 
     .projetos-lista{
         flex-direction: column;
         align-items: center;
-}
+    }
 
     .projeto-card{
         width: 100%;
         max-width: 430px;
         flex-direction: column;
-}
+    }
 
     .projeto-imagem{
         width: 100%;
@@ -907,61 +919,66 @@ body::after{
     .habilidades-secao{
         min-height: auto;
         padding: 70px 25px;
-}
+    }
 
     .habilidades-conteudo{
         flex-direction: column;
         gap: 30px;
-}
+    }
 
     .habilidade-grupo{
         width: 100%;
         padding: 0;
-}
+    }
 
     .habilidade-interpessoal{
         border-left: none;
         border-top: 1px solid rgba(139, 92, 246, 0.35);
         padding-top: 30px;
-}
+    }
 
     .habilidade-itens{
         justify-content: flex-start;
-}
+    }
 
     .contato{
         min-height: auto;
         padding: 70px 20px;
-}
+    }
 
     .contato-conteudo{
         width: 100%;
-}
+    }
 
     .contatos{
         flex-direction: column;
         align-items: center;
-}
+    }
 
     .contato-card{
         width: 100%;
         max-width: 320px;
         box-sizing: border-box;
-}
+    }
 
     body{
         background-attachment: scroll;
-}
+    }
 
     .menu{
         gap: 15px;
         padding: 18px 10px;
         flex-wrap: wrap;
-}
+    }
 
     .menu a{
         font-size: 13px;
-}
+    }
+
+    .sobre h2.titulo-caixa, .titulo-secao.titulo-caixa{
+    font-size: 28px;
+    padding: 8px 14px;
+    }
 
 }
 
